@@ -69,6 +69,25 @@
     @media (max-width:520px){
       nav{display:none}
     }
+    /* زر التحميل في المعرض */
+.portfolio .caption a.btn-primary {
+  background: var(--blue-dark);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  transition: .3s;
+  display: inline-block;
+  margin-top: 10px;
+}
+.portfolio .caption a.btn-primary:hover {
+  background: var(--orange);
+}
+
   </style>
 </head>
 <body>
@@ -115,6 +134,29 @@
   </section>
 
   <section id="packages" class="packages">
+    <section id="portfolio" class="portfolio">
+  <h2>🖼️ معرض الأعمال</h2>
+  <div class="portfolio-grid">
+    <div class="work">
+      <img src="portfolio_images/CV_Belfodil_Salah_Eddine_thumb.jpg" alt="CV Salah Eddine">
+      <div class="caption">
+        <h4>سيرة ذاتية — Salah Eddine</h4>
+        <p>تصميم وتنسيق CV احترافي</p>
+        <a href="CV_Belfodil_Salah_Eddine.pdf" target="_blank" class="btn-primary">📥 تحميل PDF</a>
+      </div>
+    </div>
+
+    <div class="work">
+      <img src="portfolio_images/khaled azzaoui (3)_thumb.jpg" alt="CV Khaled Azzaoui">
+      <div class="caption">
+        <h4>سيرة ذاتية — Khaled Azzaoui</h4>
+        <p>نماذج من أعمال كتابة وتنسيق</p>
+        <a href="khaled azzaoui (3).pdf" target="_blank" class="btn-primary">📥 تحميل PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+    
     <h2>📦 اكتشف باقاتنا</h2>
     <div class="packages-grid">
       <div class="package">

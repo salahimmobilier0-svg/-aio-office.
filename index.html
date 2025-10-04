@@ -188,6 +188,61 @@
       </div>
     </section>
 
+      <!-- معرض الأعمال -->
+  <section id="portfolio" class="portfolio">
+    <h2>🎨 معرض أعمالنا</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="https://i.pinimg.com/736x/14/f4/b7/14f4b73e7a787e2249b31d5b0d595c8d.jpg" alt="عمل تصميم" />
+        <img src="https://i.pinimg.com/736x/7b/36/90/7b3690cc8cf7fa4a2b789ec92f9cdb3e.jpg" alt="بطاقة عمل" />
+        <img src="https://i.pinimg.com/736x/b3/32/3d/b3323dff2458b6ee13a2c7f54b682c11.jpg" alt="منشور رقمي" />
+        <img src="https://i.pinimg.com/736x/d5/7b/ee/d57bee4ec6f04bff7da2a8c7d09f48ce.jpg" alt="سيرة ذاتية" />
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .portfolio{
+      background:#f9fbfd;
+      padding:60px 20px;
+      text-align:center;
+    }
+    .portfolio h2{
+      font-size:26px;
+      margin-bottom:30px;
+      color:var(--blue-dark);
+    }
+    .slider{
+      position:relative;
+      max-width:800px;
+      margin:auto;
+      overflow:hidden;
+      border-radius:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    }
+    .slides{
+      display:flex;
+      width:400%;
+      animation:slide 16s infinite;
+    }
+    .slides img{
+      width:100%;
+      border-radius:20px;
+      object-fit:cover;
+    }
+    @keyframes slide{
+      0%{margin-left:0}
+      20%{margin-left:0}
+      25%{margin-left:-100%}
+      45%{margin-left:-100%}
+      50%{margin-left:-200%}
+      70%{margin-left:-200%}
+      75%{margin-left:-300%}
+      95%{margin-left:-300%}
+      100%{margin-left:0}
+    }
+  </style>
+
     <section id="contact" style="margin-top:28px">
       <h2>اتصل بنا</h2>
       <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">

@@ -3,341 +3,183 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>All-in-One Office — كامل الموقع</title>
-  <meta name="description" content="All-in-One Office — خدمات إدارية، رقمية وجامعية عبر الإنترنت. CV, تصميم, بحوث، فحص مواقع، وسيط." />
+  <title>All-in-One Office — مكتب خدمات أونلاين</title>
+  <meta name="description" content="نقدّم CV احترافية، رسائل تحفيزية، تصميم بطاقات ومنشورات، بحوث جامعية، فحص مواقع ووساطة — كل شيء عبر الإنترنت وباحترافية." />
   <style>
-    :root{
-      --blue-dark:#0d3a4a;--blue-mid:#1d5c85;--gray:#5a6670;--orange:#ff7b39;--green:#2ca24c;--bg:#f5f7fa;--card:#ffffff;
-      --accent:#1d5c85;--muted:#9aa5b1;--glass:rgba(255,255,255,0.6);
-      font-family: 'Segoe UI', Tahoma, system-ui, Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef4fa);color:var(--blue-dark);direction:rtl}
-    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.75);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;padding:12px 28px;border-bottom:1px solid rgba(13,58,74,0.04)}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
-    nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-weight:600}
-    nav a:hover{color:var(--accent)}
-    main{max-width:1100px;margin:20px auto;padding:18px}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:26px;align-items:center;padding:26px;background:linear-gradient(180deg,rgba(29,92,133,0.03),rgba(13,58,74,0.02));border-radius:14px}
-    .kicker{background:var(--orange);display:inline-block;color:#fff;padding:6px 12px;border-radius:8px;font-weight:700}
-    .hero h1{margin:10px 0;font-size:28px}
-    .hero p{color:var(--muted);line-height:1.7}
-    .hero .ctas{display:flex;gap:10px;margin-top:14px}
-    .btn{padding:10px 16px;border-radius:10px;text-decoration:none;color:#fff;font-weight:700}
-    .btn.wh{background:#25D366}
-    .btn.primary{background:var(--blue-dark)}
-    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 20px rgba(13,58,74,0.04)}
-
-    /* Services grid */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-    .service{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(13,58,74,0.03);text-align:right}
-    .service h3{margin:8px 0}
-    .service p{color:var(--muted);font-size:14px}
-
-    /* Packages cards */
-    .packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
-    .pkg{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(13,58,74,0.04);text-align:right}
-    .pkg h4{margin:8px 0}
-    .pkg ul{padding:0 10px;margin:0;color:var(--muted)}
-    .pkg .actions{display:flex;gap:8px;justify-content:center;margin-top:12px}
-    .wa-btn{background:#25D366;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700}
-    .email-btn{background:#1d5c85;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700}
-
-    /* Portfolio */
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px}
-
-    /* Contact form popup */
-    .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);align-items:center;justify-content:center;z-index:1200}
-    .modal{background:#fff;padding:18px;border-radius:12px;width:360px;max-width:94%}
-    .modal h3{margin-top:0}
-    .modal input,.modal textarea,.modal select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6;margin-top:8px}
-    .modal .send{background:#25D366;color:#fff;border:none;padding:10px 12px;border-radius:8px;font-weight:700;width:100%;margin-top:12px}
-
-    footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
-
-    @media (max-width:860px){.hero{grid-template-columns:1fr}.logo{width:40px;height:40px}}
+    :root{font-family: "Segoe UI", Tahoma, Arial, sans-serif;}
+    body{margin:0;padding:0;background:#f7f7f7;color:#111;line-height:1.6}
+    header{background:#fff;padding:16px 20px;box-shadow:0 1px 6px rgba(0,0,0,.06);position:sticky;top:0;z-index:10}
+    .container{max-width:980px;margin:18px auto;padding:0 16px}
+    nav a{margin-left:12px;text-decoration:none;color:#0b70c9;font-weight:600}
+    h1,h2,h3{margin:8px 0}
+    .hero{background:#fff;padding:22px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+    .grid{display:grid;grid-template-columns:1fr 280px;gap:16px;align-items:start}
+    .card{background:#fff;padding:14px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.03)}
+    ul{padding-inline-start:20px;margin:8px 0}
+    footer{margin-top:20px;padding:20px;text-align:center;color:#666;font-size:14px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:6px;text-decoration:none;border:1px solid #0b70c9;color:#0b70c9}
+    .testimonials{display:grid;gap:12px;margin-top:12px}
+    .testimonial{background:#fff;padding:14px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.03)}
+    .stars{color:#f5a623;font-size:18px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr;}.container{padding:12px}}
   </style>
 </head>
 <body>
   <header>
-    <div class="brand"><div class="logo">AIO</div><div><strong>All-in-One Office</strong></div></div>
-    <nav>
-      <a href="#home">الرئيسية</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#portfolio">معرض الأعمال</a>
-      <a href="#about">من نحن</a>
-      <a href="#contact">اتصل بنا</a>
-    </nav>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <div>
+        <strong style="font-size:18px">AIO</strong>
+        <div style="font-size:13px;color:#666">All-in-One Office</div>
+      </div>
+      <nav aria-label="التنقل">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#reviews">آراء العملاء</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">اتصل بنا</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="home">
-    <section class="hero">
-      <div>
-        <div class="kicker">خدمات شاملة</div>
-        <h1>All-in-One Office — مكتب خدمات أونلاين</h1>
-        <p>نقدّم CV احترافية، رسائل تحفيزية، تصميم بطاقات ومنشورات، بحوث جامعية، فحص مواقع ووساطة — كل شيء عبر الإنترنت وباحترافية.</p>
-        <div class="ctas">
-          <a class="btn wh" href="https://wa.me/213656491823" target="_blank">💬 واتساب</a>
-          <a class="btn primary" href="#packages">📦 اكتشف الباقات</a>
-        </div>
-      </div>
+  <main class="container">
+    <section id="home" class="hero card">
+      <h1>خدمات شاملة</h1>
+      <h2>All-in-One Office — مكتب خدمات أونلاين</h2>
+      <p>نقدّم CV احترافية، رسائل تحفيزية، تصميم بطاقات ومنشورات، بحوث جامعية، فحص مواقع ووساطة — كل شيء عبر الإنترنت وباحترافية.</p>
 
-      <aside class="card">
-        <h4>تواصل سريع</h4>
-        <p style="color:var(--muted)">واتساب: <a href="https://wa.me/213656491823" target="_blank">+213656491823</a></p>
-        <p style="color:var(--muted)">Email: <a href="mailto:blfdsalah@gmail.com">blfdsalah@gmail.com</a></p>
-        <div style="margin-top:12px;text-align:center">
-          <img src="aio.office_qr (1).png" alt="QR" style="width:140px;border-radius:10px">
-          <div style="margin-top:6px;color:var(--accent);font-weight:700">@aio.office</div>
-        </div>
+      <p>
+        <a class="btn" href="https://wa.me/+213656491823" target="_blank" rel="noopener">واتساب</a>
+        <a class="btn" href="#packages" style="margin-inline-start:8px">اكتشف الباقات</a>
+      </p>
+
+      <aside style="margin-top:12px;font-size:14px;color:#333">
+        <strong>تواصل سريع</strong><br/>
+        واتساب: <a href="https://wa.me/+213656491823">+213656491823</a><br/>
+        Email: <a href="mailto:blfdsalah@gmail.com">blfdsalah@gmail.com</a><br/>
+        @aio.office
       </aside>
     </section>
 
-    <section id="services" style="margin-top:28px">
-      <h2>خدماتنا</h2>
+    <section id="services" style="margin-top:16px">
       <div class="grid">
-        <div class="service"><h3>خدمات إدارية</h3><p>سير ذاتية، رسائل تحفيزية، ترجمة، تفريغ صوتي.</p></div>
-        <div class="service"><h3>خدمات رقمية</h3><p>تصميم بوستات، شعارات، إدارة صفحات، إعلانات ممولة.</p></div>
-        <div class="service"><h3>خدمات جامعية</h3><p>بحوث، ملخصات، عروض PowerPoint، تنسيق مذكرات.</p></div>
-        <div class="service"><h3>الأمان والوساطة</h3><p>فحص مواقع مشبوهة، تقييم مصداقية، وساطة.</p></div>
-      </div>
+        <div>
+          <div class="card">
+            <h2>خدماتنا</h2>
 
-      <div id="packages" class="packages">
-        <div class="pkg">
-          <h4>الخدمات الإدارية</h4>
-          <ul>
-            <li>CV احترافي (Word + PDF)</li>
-            <li>CV + رسالة تحفيزية</li>
-            <li>ترجمة وتحرير</li>
-          </ul>
-          <div class="actions">
-            <a class="wa-btn" href="https://wa.me/213656491823?text=مرحبا، أريد طلب الخدمة: الخدمات الإدارية" target="_blank">واتساب</a>
-            <a class="email-btn" href="mailto:blfdsalah@gmail.com?subject=طلب%20خدمة%20-%20الخدمات%20الإدارية">ايميل</a>
+            <h3>خدمات إدارية</h3>
+            <p>سير ذاتية، رسائل تحفيزية، ترجمة، تفريغ صوتي.</p>
+
+            <h3>خدمات رقمية</h3>
+            <p>تصميم بوستات، شعارات، إدارة صفحات، إعلانات ممولة.</p>
+
+            <h3>خدمات جامعية</h3>
+            <p>بحوث، ملخصات، عروض PowerPoint، تنسيق مذكرات.</p>
+
+            <h3>الأمان والوساطة</h3>
+            <p>فحص مواقع مشبوهة، تقييم مصداقية، وساطة.</p>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h3>أسئلة متكررة</h3>
+            <strong>كيف يتم الدفع؟</strong>
+            <p>بريد موبي، CCP، بايسيرا أو تحويل بنكي. نرسل فاتورة بعد الدفع.</p>
+
+            <strong>كم مدة التسليم؟</strong>
+            <p>تصغير مشاريع خلال 24-72 ساعة حسب نوع الخدمة.</p>
+
+            <strong>هل توجد ضمانات؟</strong>
+            <p>تعديلات بسيطة مجانية خلال 3 أيام بعد التسليم.</p>
           </div>
         </div>
 
-        <div class="pkg">
-          <h4>الخدمات الرقمية</h4>
-          <ul>
-            <li>تصميم بطاقة عمل وشعار</li>
-            <li>تصميم منشورات وادارة محتوى</li>
-            <li>تحويل فيديو إلى نص ملخص</li>
-          </ul>
-          <div class="actions">
-            <a class="wa-btn" href="https://wa.me/213656491823?text=مرحبا، أريد طلب الخدمة: الخدمات الرقمية" target="_blank">واتساب</a>
-            <a class="email-btn" href="mailto:blfdsalah@gmail.com?subject=طلب%20خدمة%20-الخدمات%20الرقمية">ايميل</a>
-          </div>
-        </div>
-
-        <div class="pkg">
-          <h4>الخدمات الجامعية</h4>
-          <ul>
-            <li>بحوث أكاديمية (تنسيق + مراجع)</li>
-            <li>عروض PowerPoint جاهزة</li>
-            <li>تلخيص كتب ومقالات</li>
-          </ul>
-          <div class="actions">
-            <a class="wa-btn" href="https://wa.me/213656491823?text=مرحبا، أريد طلب الخدمة: الخدمات الجامعية" target="_blank">واتساب</a>
-            <a class="email-btn" href="mailto:blfdsalah@gmail.com?subject=طلب%20خدمة%20-الخدمات%20الجامعية">ايميل</a>
-          </div>
-        </div>
-
-        <div class="pkg">
-          <h4>الأمان والوساطة</h4>
-          <ul>
-            <li>فحص مواقع مشبوهة</li>
-            <li>تقييم مصداقية خدمات</li>
-            <li>وساطة ومتابعة الصفقات</li>
-          </ul>
-          <div class="actions">
-            <a class="wa-btn" href="https://wa.me/213656491823?text=مرحبا، أريد طلب الخدمة: الأمان والوساطة" target="_blank">واتساب</a>
-            <a class="email-btn" href="mailto:blfdsalah@gmail.com?subject=طلب%20خدمة%20-الأمان%20والوساطة">ايميل</a>
+        <div>
+          <div class="card" style="margin-top:12px">
+            <h3>طلب خدمة سريعة</h3>
+            <form action="#" method="post" onsubmit="alert('نموذج وهمي — استبدل الـ action لتجعل النموذج يعمل');return false">
+              <label>اختر الخدمة</label>
+              <select required style="width:100%;padding:8px;margin-top:6px">
+                <option>الخدمات الإدارية</option>
+                <option>الخدمات الرقمية</option>
+                <option>الخدمات الجامعية</option>
+                <option>الأمان والوساطة</option>
+              </select>
+              <textarea placeholder="وصف الطلب (اختياري)" style="width:100%;padding:8px;margin-top:8px" rows="4"></textarea>
+              <div style="margin-top:8px">
+                <button class="btn" type="submit">أرسل عبر واتساب</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="portfolio" style="margin-top:28px">
-      <h2>معرض الأعمال</h2>
-      <p style="color:var(--muted)">نماذج من سير ذاتية، بطاقات عمل وتصاميم قمت بها — ضع صورك هنا داخل مجلد الموقع باسم images/</p>
-      <div class="gallery">
-        <img src="images/sample1.jpg" alt="sample1">
-        <img src="images/sample2.jpg" alt="sample2">
-        <img src="images/sample3.jpg" alt="sample3">
-        <img src="images/sample4.jpg" alt="sample4">
-      </div>
-    </section>
-
-    <section id="about" style="margin-top:28px">
-      <h2>من نحن</h2>
-      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
-        <div style="flex:1;min-width:260px">
-          <p style="color:var(--muted)">All-in-One Office هو مكتب خدمات أونلاين متخصص في تقديم حلول رقمية، إدارية وأكاديمية بجودة وسرعة. مؤسس: بلفضيل صلاح الدين — طالب علوم اجتماع وخبير في التصميم والبحث.</p>
-          <ul style="color:var(--muted)">
-            <li>خبرات: كتابة أكاديمية، تصميم، تفريغ صوتي، فحص مواقع.</li>
-            <li>التزام بالسرية والجودة والتواصل المستمر.</li>
-          </ul>
-        </div>
-        <div style="width:220px;min-width:180px">
-          <img src="images/profile.jpg" alt="profile" style="width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)">
-        </div>
-      </div>
-    </section>
-
-      <!-- معرض الأعمال -->
-  <section id="portfolio" class="portfolio">
-    <h2>🎨 معرض أعمالنا</h2>
-    <div class="slider">
-      <div class="slides">
-        <img src="https://i.pinimg.com/736x/14/f4/b7/14f4b73e7a787e2249b31d5b0d595c8d.jpg" alt="عمل تصميم" />
-        <img src="https://i.pinimg.com/736x/7b/36/90/7b3690cc8cf7fa4a2b789ec92f9cdb3e.jpg" alt="بطاقة عمل" />
-        <img src="https://i.pinimg.com/736x/b3/32/3d/b3323dff2458b6ee13a2c7f54b682c11.jpg" alt="منشور رقمي" />
-        <img src="https://i.pinimg.com/736x/d5/7b/ee/d57bee4ec6f04bff7da2a8c7d09f48ce.jpg" alt="سيرة ذاتية" />
-      </div>
-    </div>
-  </section>
-
-  <style>
-    .portfolio{
-      background:#f9fbfd;
-      padding:60px 20px;
-      text-align:center;
-    }
-    .portfolio h2{
-      font-size:26px;
-      margin-bottom:30px;
-      color:var(--blue-dark);
-    }
-    .slider{
-      position:relative;
-      max-width:800px;
-      margin:auto;
-      overflow:hidden;
-      border-radius:20px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
-    }
-    .slides{
-      display:flex;
-      width:400%;
-      animation:slide 16s infinite;
-    }
-    .slides img{
-      width:100%;
-      border-radius:20px;
-      object-fit:cover;
-    }
-    @keyframes slide{
-      0%{margin-left:0}
-      20%{margin-left:0}
-      25%{margin-left:-100%}
-      45%{margin-left:-100%}
-      50%{margin-left:-200%}
-      70%{margin-left:-200%}
-      75%{margin-left:-300%}
-      95%{margin-left:-300%}
-      100%{margin-left:0}
-    }
-  </style>
-
-    <section id="contact" style="margin-top:28px">
-      <h2>اتصل بنا</h2>
-      <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
-        <div class="card">
-          <p style="color:var(--muted)">املأ النموذج أو تواصل مباشرة عبر الأزرار.</p>
-          <form id="quickForm" onsubmit="sendQuick(event)">
-            <input id="f_name" placeholder="الإسم الكامل" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6;margin-top:8px">
-            <input id="f_contact" placeholder="بريد أو رقم واتساب" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6;margin-top:8px">
-            <select id="f_service" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6;margin-top:8px">
-              <option value="">اختر الخدمة</option>
-              <option>الخدمات الإدارية</option>
-              <option>الخدمات الرقمية</option>
-              <option>الخدمات الجامعية</option>
-              <option>الأمان والوساطة</option>
-            </select>
-            <textarea id="f_notes" placeholder="ملاحظات" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6;margin-top:8px;min-height:90px"></textarea>
-            <div style="display:flex;gap:10px;margin-top:12px">
-              <button type="submit" class="wa-btn">أرسل عبر واتساب</button>
-              <a class="email-btn" href="mailto:blfdsalah@gmail.com?subject=استفسار" style="display:inline-flex;align-items:center;justify-content:center">ايميل</a>
-            </div>
-          </form>
-        </div>
-
-        <aside class="card">
-          <h4>معلومات التواصل</h4>
-          <p style="color:var(--muted)">واتساب: <a href="https://wa.me/213656491823" target="_blank">+213656491823</a></p>
-          <p style="color:var(--muted)">Email: <a href="mailto:blfdsalah@gmail.com">blfdsalah@gmail.com</a></p>
-          <div style="margin-top:12px;text-align:center">
-            <img src="aio.office_qr (1).png" alt="QR" style="width:140px;border-radius:10px">
-            <div style="margin-top:6px;color:var(--accent);font-weight:700">@aio.office</div>
+    <!-- قسم آراء العملاء -->
+    <section id="reviews" style="margin-top:16px">
+      <div class="card">
+        <h2>آراء العملاء</h2>
+        <p>نعتز بثقة عملائنا وتجاربهم المميزة معنا:</p>
+        <div class="testimonials">
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>“خدمة رائعة جدًا! تم إنجاز السيرة الذاتية بسرعة وباحترافية عالية.”</p>
+            <strong>— فاطمة من الجزائر</strong>
           </div>
-        </aside>
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>“تعامل محترم، والتصميم كان جميل ومناسب لطلبي تمامًا.”</p>
+            <strong>— محمد من المغرب</strong>
+          </div>
+          <div class="testimonial">
+            <div class="stars">★★★★☆</div>
+            <p>“خدمة البحث الجامعي ممتازة وسريعة، أنصح الجميع بالتعامل.”</p>
+            <strong>— أسماء من تونس</strong>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section style="margin-top:26px">
-      <h2>أسئلة متكررة</h2>
-      <div class="grid" style="margin-top:12px">
-        <div class="card"><h4>كيف يتم الدفع؟</h4><p style="color:var(--muted)">بريد موبي، CCP، بايسيرا أو تحويل بنكي. نرسل فاتورة بعد الدفع.</p></div>
-        <div class="card"><h4>كم مدة التسليم؟</h4><p style="color:var(--muted)">تصغير مشاريع خلال 24-72 ساعة حسب نوع الخدمة.</p></div>
-        <div class="card"><h4>هل توجد ضمانات؟</h4><p style="color:var(--muted)">تعديلات بسيطة مجانية خلال 3 أيام بعد التسليم.</p></div>
+    <section id="about" style="margin-top:16px">
+      <div class="card">
+        <h2>من نحن</h2>
+        <p>All-in-One Office هو مكتب خدمات أونلاين متخصص في تقديم حلول رقمية، إدارية وأكاديمية بجودة وسرعة.</p>
+        <p><strong>مؤسس:</strong> بلفضيل صلاح الدين — طالب علوم اجتماع وخبير في التصميم والبحث.</p>
+        <ul>
+          <li>خبرات: كتابة أكاديمية، تصميم، تفريغ صوتي، فحص مواقع.</li>
+          <li>التزام بالسرية والجودة والتواصل المستمر.</li>
+        </ul>
       </div>
     </section>
+
+    <section id="contact" style="margin-top:16px">
+      <div class="card">
+        <h2>اتصل بنا</h2>
+        <p>املأ النموذج أو تواصل مباشرة عبر الأزرار.</p>
+        <p>
+          <a class="btn" href="https://wa.me/+213656491823">واتساب: +213656491823</a>
+          <a class="btn" href="mailto:blfdsalah@gmail.com" style="margin-inline-start:8px">ايميل</a>
+        </p>
+
+        <h4>معلومات التواصل</h4>
+        <p>واتساب: <a href="https://wa.me/+213656491823">+213656491823</a><br/>Email: <a href="mailto:blfdsalah@gmail.com">blfdsalah@gmail.com</a><br/>@aio.office</p>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 All-in-One Office — كل الحقوق محفوظة • تواصل: +213656491823
+    </footer>
   </main>
 
-  <footer>
-    © 2025 All-in-One Office — كل الحقوق محفوظة • تواصل: +213656491823
-  </footer>
-
-  <!-- Floating buttons -->
-  <div style="position:fixed;bottom:18px;right:18px;display:flex;flex-direction:column;gap:12px;z-index:1300">
-    <a href="https://wa.me/213656491823" target="_blank" style="width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25D366;color:#fff;text-decoration:none;font-size:22px;box-shadow:0 6px 18px rgba(0,0,0,0.16)">💬</a>
-    <a href="mailto:blfdsalah@gmail.com" style="width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--blue-mid);color:#fff;text-decoration:none;font-size:20px;box-shadow:0 6px 18px rgba(0,0,0,0.12)">✉️</a>
-  </div>
-
-  <!-- Overlay Modal (popup form) -->
-  <div id="overlay" class="overlay">
-    <div class="modal">
-      <button onclick="closeModal()" style="float:left;background:transparent;border:none;font-size:18px;cursor:pointer">✖️</button>
-      <h3>طلب خدمة سريعة</h3>
-      <form onsubmit="submitModal(event)">
-        <input id="m_name" placeholder="الإسم الكامل" required>
-        <input id="m_contact" placeholder="بريد أو رقم واتساب" required>
-        <select id="m_service"><option>الخدمات الإدارية</option><option>الخدمات الرقمية</option><option>الخدمات الجامعية</option><option>الأمان والوساطة</option></select>
-        <textarea id="m_notes" placeholder="ملاحظات"></textarea>
-        <button class="send" type="submit">أرسل عبر واتساب</button>
-      </form>
-    </div>
-  </div>
-
   <script>
-    // Quick form -> WhatsApp
-    function sendQuick(e){
-      e.preventDefault();
-      const name=document.getElementById('f_name').value;
-      const contact=document.getElementById('f_contact').value;
-      const service=document.getElementById('f_service').value;
-      const notes=document.getElementById('f_notes').value;
-      const text=`مرحبًا، أنا ${name}%0Aبيانات: ${contact}%0Aالخدمة: ${service}%0Aالملاحظات: ${notes}`;
-      window.open(`https://wa.me/213656491823?text=${encodeURIComponent(text)}`,'_blank');
-    }
-
-    // Modal functions
-    function openModal(){document.getElementById('overlay').style.display='flex'}
-    function closeModal(){document.getElementById('overlay').style.display='none'}
-    function submitModal(e){
-      e.preventDefault();
-      const name=document.getElementById('m_name').value;
-      const contact=document.getElementById('m_contact').value;
-      const service=document.getElementById('m_service').value;
-      const notes=document.getElementById('m_notes').value;
-      const text=`مرحبًا، أنا ${name}%0Aبيانات: ${contact}%0Aالخدمة: ${service}%0Aالملاحظات: ${notes}`;
-      window.open(`https://wa.me/213656491823?text=${encodeURIComponent(text)}`,'_blank');
-      closeModal();
-    }
+    (function(){
+      document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', e=>{
+          e.preventDefault();
+          const id = a.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+        });
+      });
+    })();
   </script>
 </body>
 </html>
